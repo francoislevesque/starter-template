@@ -7,5 +7,10 @@ This template contains many libraries in the bower.json file:
 * Chart.js - Charting Library
 * Slick Slider - Slider Library
 * Vue.js
+* JQuery
 
 One must verify the main.scss if some libraries are removed.
+
+## Todo in near future
+* Simple Router
+* Translations working with the Router
