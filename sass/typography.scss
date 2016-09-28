@@ -1,0 +1,37 @@
+body {
+	font-family: 'proxima-nova', 'helvetica neue', 'arial', sans-serif;
+}
+
+.dark {
+	color: #fff !important;
+
+	p {
+		color: #fff;
+	}
+
+	.below-title {
+		color: #fff;
+		opacity: 0.3;
+	}
+}
+
+.stats {
+	.number {
+		font-size: 3em;
+		font-weight: 300;
+	}
+
+	.text {
+		font-size: 1.2em;
+		margin-top: -6px;
+	}
+}
+
+.below-title {
+	display: block;
+	font-weight: 600;
+	margin-top: -8px;
+	margin-bottom: 60px;
+	color: #999;
+	font-size: 1.2em;
+}

@@ -1,0 +1,181 @@
+$navHeight: 60px;
+$navHeight2: 80px;
+
+/** PACE Loading **//*
+body > :not(.pace), body:before, body:after {
+  -webkit-transition:opacity .4s ease-in-out;
+  -moz-transition:opacity .4s ease-in-out;
+  -o-transition:opacity .4s ease-in-out;
+  -ms-transition:opacity .4s ease-in-out;
+  transition:opacity .4s ease-in-out
+}
+
+body:not(.pace-done) > :not(.pace),body:not(.pace-done):before,body:not(.pace-done):after {
+  opacity:0
+}*/
+
+body {
+	font-size: 16px;
+}
+
+.wrapper {
+	padding-top: $navHeight;
+}
+
+/** Sections **/
+
+.section {
+	padding: 80px 0;
+}
+
+.section.grey {
+	background-color: #f2f2f2;
+}
+
+.section.blue {
+	background-color: $dark_blue;
+}
+
+.section.charcoal {
+	background-color: #444;
+}
+
+.section.title {
+	h1 {
+		margin-bottom: 30px;
+		font-size: 3em;
+	}
+	p {
+		margin-bottom: 40px;
+		font-size: 1em;
+	}
+}
+
+/** Containers **/
+
+.container-xs {
+	max-width: 450px;
+}
+
+.container-sm {
+	max-width: 600px;
+}
+
+.container-md {
+	max-width: 800px;
+}
+
+.container-lg {
+	max-width: 1200px;
+}
+
+/** Links **/
+
+a, a:focus, a:hover {
+	text-decoration: none;
+	color: inherit;
+}
+
+img {
+	width: 100%;
+}
+
+p {
+	color: #999;
+}
+
+strong {
+	color: #666;
+}
+
+.fullpage {
+	width: 100%;
+	margin: 0;
+	display: flex;
+
+	.v-center {
+		margin: auto;
+	}
+
+	&.title {
+		h1 {
+			margin-bottom: 20px;
+			font-size: 4em;
+		}
+		p {
+			margin-bottom: 20px;
+			font-size: 1.2em;
+		}
+		.btn {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.row.stack {
+	margin-left: 0;
+	margin-right: 0;
+
+	.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12,
+	.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12,
+	.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12,
+	.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+		padding: 0;
+		background-size: cover;
+		background-position: center;
+	}
+}
+
+/** Cover for animations **/
+.cover {
+	background-color: $dark_blue;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: 0.5s;
+	z-index: 0;
+}
+
+.img-caption {
+	h3 {
+		font-size: 1em;
+		font-weight: 400;
+		margin-bottom: 6px;
+	}
+
+	p {
+		font-size: 1em;
+		font-weight: 300;
+	}
+}
+
+/** Icons **/
+.icons {
+	.icon {
+		margin-bottom: 50px;
+		svg {
+			max-width: 50px; 
+		}
+		h2, h3 {
+			display: block;
+			margin-top: 40px;
+			font-size: 1.4em;
+			font-weight: 400;
+			color: #666;
+		}
+	}
+
+	&.small {
+		p {
+			font-size: 1.1em;
+		}
+	}
+}
+
+.anchor {
+	position: relative;
+	top: -100px;
+}

@@ -1,0 +1,45 @@
+$slide-btn-height: 30px;
+$slide-btn-width: 30px;
+
+.slider {
+	width: 100%;
+		cursor: w-resize;
+	.slide {
+		width: 100%;
+
+		&:focus {
+			outline: none;
+		}
+	}
+}
+
+.slick-prev, .slick-next {
+	&:before {
+		content: '';
+		background-image: url('/img/svg/left.svg');
+    	background-size: $slide-btn-width $slide-btn-height;
+    	width: $slide-btn-width; 
+    	height: $slide-btn-height;
+    	display: inline-block;
+    	transition: 0.3s;
+	}
+}
+
+.slick-prev {
+	&:before {
+		background-image: url('/img/svg/left.svg');
+	}
+}
+
+.slick-next {
+	&:before {
+		background-image: url('/img/svg/right.svg');
+	}
+}
+
+.slick-dots {
+	bottom: -55px;
+	li button:before {
+		font-size: 20px;
+	}
+}

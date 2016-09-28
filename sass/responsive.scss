@@ -1,0 +1,107 @@
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    .navbar {
+        height: initial;
+        background-color: #fff;
+        border-bottom: 1px solid #eee;
+
+        .navbar-toggle {
+            margin-top: 14px;
+        }
+
+        .navbar-header {
+            height: initial;
+            position: relative;
+            z-index: 2;
+
+            a {
+                height: initial;
+                line-height: initial;
+
+                svg {
+                    top: 3px !important;
+                }
+            }
+        }
+
+        .collapse.navbar-collapse {
+            position: fixed;
+            display: none;
+            top: 0;
+            left: 0;
+            padding: 0;
+            padding-top: 60px;
+            height: initial;
+            width: 100%;
+            text-align: center;
+            background-color: #fff;
+            float: none;
+            margin: 0;
+            border-bottom: 1px solid #eee;
+            .nav.navbar-nav {
+                height: initial;
+                margin: 0;
+                li {
+                    height: initial;
+
+                    a {
+                        line-height: initial;
+                        height: initial;
+                    }
+                }
+            }
+        }
+
+        &.bg {
+            height: initial;
+            .navbar-toggle {
+                margin-top: 14px;
+            }
+            .navbar-header, .navbar-collapse.collapse {
+                height: initial;
+
+                a {
+                    height: initial;
+                    line-height: initial;
+
+                    svg {
+                        height: 26px;
+                    }
+                }
+
+                .nav.navbar-nav {
+                    height: initial;
+
+                    li {
+                        height: initial;
+
+                        a {
+                            line-height: initial;
+                            height: initial;
+                        }
+                    }
+                }
+            } 
+        }
+    }
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+    
+}
