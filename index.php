@@ -1,24 +1,41 @@
-<?php $pageTitle = "Index" ?>
+<?php
 
-<!DOCTYPE html>
-<html lang="en">
-    <?php include 'partials/head.php' ?>
-    <body>
-        <?php include 'partials/nav.php' ?>
+require 'vendor/autoload.php';
 
-        <div class="fullpage title">
-            <div class="v-center">
-                <div class="container t-center">
-                    <div class="container container-sm">
-                        <h1 class="animation slideUp"><?php  echo $lang['home.title'] ?></h1>
-                        <p class="animation slideUp" data-delay="100"><?php  echo $lang['home.subtitle'] ?></p>
-                        <a href="#" class="btn btn-primary animation slideUp" data-delay="200"><?php echo $lang['home.btn'] ?></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+session_start();
 
-        <?php include "partials/footer.php" ?>
+if($_SERVER['REQUEST_URI'] == '/') {
+    if(isset($_SESSION['lang']))
+        header('Location: http://' . $_SERVER['HTTP_HOST'] . '/' . $_SESSION['lang'] . '/home');
+    else
+        header('Location: http://' . $_SERVER['HTTP_HOST'] . '/en/home');
+}
 
-    </body>
-</html>
+function loadView($language, $name) {
+    $trans = new App\Translate\Translate($language);
+    include_once($name . '.php'); // include view
+}
+
+$router = new App\Router\Router($_SERVER['REQUEST_URI']);
+
+$router->get('/home', function($language) {
+    loadView($language, 'home');
+});
+
+$router->get('/posts/:id', function($language, $id) {
+    loadView($language, 'home');
+});
+
+$router->post('/posts/:id', function($language, $id) {
+    loadView($language, 'home');
+});
+
+try {
+    $router->run();
+} catch(App\Router\RouterException $e) {
+    if(isset($_SESSION['lang']))
+        $language = $_SESSION['lang'];
+    else
+        $language = 'en';
+    loadView($language, '404');
+}

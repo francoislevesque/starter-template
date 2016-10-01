@@ -1,6 +1,6 @@
 <?php
 
-$lang = array(
+return array(
 
     "pages.home" => "Home",
     "pages.applications" => "Applications",
@@ -12,6 +12,8 @@ $lang = array(
     "home.title" => "Witify Template",
     "home.subtitle" => "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam possimus suscipit optio saepe explicabo sequi reprehenderit facere unde architecto mollitia esse totam delectus vitae, fugiat distinctio, voluptates eos nesciunt temporibus.",
     "home.btn" => "Nice Button",
+
+    "404.message" => "Page not found :(",
 
     "footer.about" => "About",
     "footer.about.text" => "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, quis odio itaque temporibus distinctio perspiciatis corrupti maxime. Alias sint, magnam optio molestiae sapiente eos non nesciunt excepturi, reprehenderit, quibusdam enim!",

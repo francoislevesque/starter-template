@@ -7,26 +7,23 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">
+            <a class="navbar-brand" href="/<?php echo $language; ?>/home">
                 LOGO
             </a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="applications.php" <?php echo ($pageTitle == "Applications") ? "class='active'" : '' ?>><?php echo $lang['pages.applications'] ?></a></li>
-                <li><a href="opportunity.php" <?php echo ($pageTitle == "Opportunity") ? "class='active'" : '' ?>><?php echo $lang['pages.opportunity'] ?></a></li>
-                <li><a href="technology.php" <?php echo ($pageTitle == "Technology") ? "class='active'" : '' ?>><?php echo $lang['pages.technology'] ?></a></li>
-                <li><a href="contact.php" <?php echo ($pageTitle == "Contact") ? "class='active'" : '' ?>><?php echo $lang['pages.contact'] ?></a></li>
+                <li><a href="applications" <?php echo ($pageTitle == "Applications") ? "class='active'" : '' ?>><?php $trans->get('pages.applications') ?></a></li>
+                <li><a href="opportunity" <?php echo ($pageTitle == "Opportunity") ? "class='active'" : '' ?>><?php $trans->get('pages.opportunity') ?></a></li>
+                <li><a href="technology" <?php echo ($pageTitle == "Technology") ? "class='active'" : '' ?>><?php $trans->get('pages.technology') ?></a></li>
+                <li><a href="contact" <?php echo ($pageTitle == "Contact") ? "class='active'" : '' ?>><?php $trans->get('pages.contact') ?></a></li>
                 <?php 
-                if(isset($_SESSION['lang'])) : 
-                    if($_SESSION['lang'] == 'en') : 
+                    if($language == 'en') :
                     ?>
-                    <li><a href="<?php echo strtolower($pageTitle) ?>.php?lang=fr">FR</a></li>
+                    <li><a href="/fr/<?php echo strtolower($pageTitle) ?>">FR</a></li>
                     <?php else : ?>
-                    <li><a href="<?php echo strtolower($pageTitle) ?>.php?lang=en">EN</a></li>
-                <?php endif; else : ?>
-                    <li><a href="<?php echo strtolower($pageTitle) ?>.php?lang=fr">FR</a></li>
-                <?php endif ?>
+                    <li><a href="/en/<?php echo strtolower($pageTitle) ?>">EN</a></li>
+                    <?php endif; ?>
             </ul>
         </div><!--/.nav-collapse -->
     </div>

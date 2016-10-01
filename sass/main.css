@@ -5,7 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-@import "https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700";
+@import "https://fonts.googleapis.com/css?family=Work+Sans:300,400,500";
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -6322,8 +6322,7 @@ footer {
     color: #183450; }
 
 body {
-  font-family: 'Work Sans', 'helvetica neue', 'arial', sans-serif;
-  letter-spacing: -0.05em; }
+  font-family: 'Work Sans', 'helvetica neue', 'arial', sans-serif; }
 
 .dark {
   color: #fff !important; }

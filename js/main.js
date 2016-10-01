@@ -44,7 +44,7 @@ function scrollAnimation() {
 		var el = $(this);
 		var elPos = el.offset().top;
 
-		var range = 600;
+		var range = window.innerHeight - (window.innerHeight * 0.2);
 
 		var min = elPos - range;
 		var max = elPos + range;
