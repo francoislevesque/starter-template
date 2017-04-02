@@ -14,6 +14,9 @@ $slide-btn-width: 30px;
 }
 
 .slick-prev, .slick-next {
+	width: $slide-btn-width;
+	height: $slide-btn-height;
+	z-index: 2;
 	&:before {
 		content: '';
 		background-image: url('/img/svg/left.svg');
@@ -26,12 +29,14 @@ $slide-btn-width: 30px;
 }
 
 .slick-prev {
+	left: 0;
 	&:before {
 		background-image: url('/img/svg/left.svg');
 	}
 }
 
 .slick-next {
+	right: 0;
 	&:before {
 		background-image: url('/img/svg/right.svg');
 	}

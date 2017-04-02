@@ -2,7 +2,7 @@
 
 body {
 	font-family: 'Work Sans', 'helvetica neue', 'arial', sans-serif;
-	letter-spacing: -0.05em;
+	letter-spacing: -0.02em;
 }
 
 .dark {
@@ -37,4 +37,22 @@ body {
 	margin-bottom: 60px;
 	color: #999;
 	font-size: 1.2em;
+}
+
+.title {
+	h1 {
+		font-weight: 200;
+		font-size: 5.2em;
+		letter-spacing: -0.05em;
+		margin-bottom: 30px;
+	}
+}
+
+h2 {
+	font-weight: 600;
+	color: $blue;
+
+	&.big {
+		font-size: 3em;
+	}
 }

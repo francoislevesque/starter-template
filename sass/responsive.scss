@@ -1,11 +1,28 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
-
+    .marketplaces {
+        .marketplace {
+            width: 100%;
+        }
+    }
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+    .share {
+        width: 100%;
+        bottom: 0;
+        top: initial;
 
+        .ssk {
+            display: inline-block;
+            width: (100/5) * 1%;
+        }
+    }
+
+    footer {
+        margin-bottom: 61px; // For share
+    }
 }
 
 /* Small Devices, Tablets */
@@ -27,6 +44,7 @@
             a {
                 height: initial;
                 line-height: initial;
+                color: #333;
 
                 svg {
                     top: 3px !important;
@@ -57,6 +75,7 @@
                     a {
                         line-height: initial;
                         height: initial;
+                        color: #333;
                     }
                 }
             }
@@ -65,7 +84,7 @@
         &.bg {
             height: initial;
             .navbar-toggle {
-                margin-top: 14px;
+                margin-top: 9px;
             }
             .navbar-header, .navbar-collapse.collapse {
                 height: initial;
@@ -94,11 +113,48 @@
             } 
         }
     }
+    
+    .marketplace {
+        .slideshow {
+            opacity: 0;
+        }
+    }
+
+    footer {
+        .bitcoin {
+            margin-top: 30px;
+            float: none;
+        }
+
+        .author {
+            float: none;
+            margin-top: 60px;
+        }
+    }
 }
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width : 480px) {
+    .hero {
+        padding-top: 100px;
+        .video-link {
+            width: 100%;
+            text-align: center;
+            left: 0;
+            .play {
+                margin: 0;
+            }
+            .text {
+                margin-top: 30px;
+                text-align: center;
+                display: block;
+            }
+        }
 
+        .title h1 {
+            font-size: 3em;
+        }
+    }
 }
 
 /* Custom, iPhone Retina */ 

@@ -1,6 +1,6 @@
 .navbar {
 	height: $navHeight;
-	background-color: #fff;
+	background-color: transparent;
 	border: none;
 	border-bottom: solid transparent 1px;
 	transition: 0.4s;
@@ -17,17 +17,35 @@
 	.navbar-header {
 		height: $navHeight;
 
+		.navbar-brand {
+			padding: 10px 0;
+			padding-left: 20px;
+			display: flex;
+			align-items: center;
+  			justify-content: center;
+		}
+
 		a {
 			transition: 0.5s;
 			height: $navHeight;
 			line-height: $navHeight / 2;
+			color: #fff;
+			font-weight: 500;
+
+			span {
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: 20px;
+			}
 
 			svg {
 				position: relative;
-				top: 1px;
+				top: 0px;
 				transition: 0.4s;
 				fill: #333;
-				height: 26px;
+				height: 48px;
+				display: inline-block;
+				vertical-align: middle;
 			}
 		}
 	}
@@ -49,12 +67,16 @@
 					font-size: 0.7em;
 					letter-spacing: 2px;
 					text-transform: uppercase;
-					color: #666;
+					color: #fff;
 					border-bottom: 2px rgba(255,255,255,0.01) solid;
 					transition: 0.2s;
 
+					&:active, &:focus {
+						background-color: initial;
+					}
+
 					&:hover, &.active {
-						color: lighten($dark_blue, 20);
+						color: lighten($blue, 20);
 						background-color: initial;
 					}
 				}
@@ -75,11 +97,12 @@
 			a {
 				height: $navHeight2;
 				line-height: $navHeight2 / 1.7;
+				color: #333;
 
 				svg {
-					top: 7px;
+					top: 0px;
 					fill: #333;
-					height: 35px;
+					height: 61px;
 				}
 			}
 
@@ -92,6 +115,11 @@
 					a {
 						line-height: $navHeight2 / 1.7;
 						height: $navHeight2;
+						color: #333;
+
+						&:hover {
+							color: $blue;
+						}
 					}
 				}
 			}
@@ -100,13 +128,13 @@
 }
 
 .sub-menu {
-	background-color: darken($dark_blue, 10);
+	background-color: darken($blue, 10);
 	padding: 12px 0;
 
 	a {
 		transition: 0.4s;
 		&:hover {
-			color: lighten($dark_blue, 20);
+			color: lighten($blue, 20);
 		}
 	}
 

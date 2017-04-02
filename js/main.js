@@ -5,6 +5,17 @@ var width = $(window).width();
 $(document).ready(function() {
 	responsivness();
 	scrollAnimation();
+
+	$(".anchor-link").each(function() {
+		$(this).click(function(e) {
+			e.preventDefault();
+			var id = $(this).data('to');
+		    $('html, body').animate({
+		        scrollTop: $("#" + id).offset().top - 80
+		    }, 200);
+		});
+	});
+	
 });
 
 $(window).resize(function() {

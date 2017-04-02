@@ -1,0 +1,25 @@
+form {
+	label {
+		font-weight: 400;
+		font-size: 0.9em;
+	}
+
+	.form-control {
+		background-color: transparent;
+		border: none;
+		border-radius: 0;
+		box-shadow: none;
+
+		border-bottom: 1px solid #fff;
+		color: #fff;
+
+		&:focus, &:active {
+			background-color: rgba(255,255,255,0.1);
+			box-shadow: none;
+		} 
+	}
+
+	select option {
+		color: #333;
+	}
+}

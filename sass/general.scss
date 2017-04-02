@@ -14,6 +14,13 @@ body:not(.pace-done) > :not(.pace),body:not(.pace-done):before,body:not(.pace-do
   opacity:0
 }*/
 
+::-moz-selection { background: #e09b24; color: #fff; }
+::selection { background: #e09b24; color: #fff; }
+
+html, body {
+	width: 100%;
+}
+
 body {
 	font-size: 16px;
 }
@@ -29,26 +36,14 @@ body {
 }
 
 .section.grey {
-	background-color: #f2f2f2;
+	background-color: #f4f4f4;
 }
 
 .section.blue {
-	background-color: $dark_blue;
-}
-
-.section.charcoal {
-	background-color: #444;
-}
-
-.section.title {
-	h1 {
-		margin-bottom: 30px;
-		font-size: 3em;
-	}
-	p {
-		margin-bottom: 40px;
-		font-size: 1em;
-	}
+	background-image: url('../../img/bg.jpg');
+	background-size: cover;
+	background-position: center;
+	color: #fff !important;
 }
 
 /** Containers **/
@@ -74,6 +69,7 @@ body {
 a, a:focus, a:hover {
 	text-decoration: none;
 	color: inherit;
+	outline: none;
 }
 
 img {
@@ -88,27 +84,15 @@ strong {
 	color: #666;
 }
 
-.fullpage {
-	width: 100%;
-	margin: 0;
-	display: flex;
+.hero {
+	padding: 260px 0;
+	background-image: url('../../img/bg.jpg');
+	background-size: cover;
+	background-position: center;
+	color: #fff;
 
-	.v-center {
-		margin: auto;
-	}
-
-	&.title {
-		h1 {
-			margin-bottom: 20px;
-			font-size: 4em;
-		}
-		p {
-			margin-bottom: 20px;
-			font-size: 1.2em;
-		}
-		.btn {
-			margin-bottom: 30px;
-		}
+	.btn {
+		margin-top: 30px;
 	}
 }
 
@@ -128,7 +112,7 @@ strong {
 
 /** Cover for animations **/
 .cover {
-	background-color: $dark_blue;
+	background-color: $blue;
 	opacity: 0;
 	width: 100%;
 	height: 100%;
@@ -178,4 +162,17 @@ strong {
 .anchor {
 	position: relative;
 	top: -100px;
+}
+
+.share {
+	position: fixed;
+	right: 0;
+	top: calc(50% - 154px);
+	z-index: 3;
+
+	.ssk {
+		display: block;
+		margin: 0;
+		padding: 20px;
+	}
 }

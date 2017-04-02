@@ -4,28 +4,35 @@ footer {
 
 	.top {
 		padding: 70px 0;
+		position: relative;
 	}
 
-	.about, .menu {
-		h3 {
-			font-weight: 600;
-			color: #fff;
-			text-transform: uppercase;
-			letter-spacing: 3px;
-			font-size: 0.8em;
-			margin-bottom: 20px;
+	.twitter {
+		display: inline-block;
+		.logo, .text {
+			display: inline-block;
+			vertical-align: middle;
 		}
-	}
-	.menu {
-		a {
-			display: block;
-			margin-bottom: 6px;
-			transition: 0.2s;
 
-			&:hover {
-				color: #777;
+		img {
+			width: 50px;
+		}
+
+		.logo {
+			margin-right: 5px;
+		}
+
+		.text {
+			span {
+				display: block;
 			}
 		}
+	}
+
+	.bitcoin {
+		float: right;
+		width: 150px;
+		opacity: 0.6;
 	}
 
 	.rights, .author {
